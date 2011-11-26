@@ -1,0 +1,55 @@
+%
+% Begin: Check if necessary macros have been defined
+%
+\ifundef{\mytitle}{
+	\newcommand{\mytitle}{Undefined title}
+}{ \relax }
+
+\ifundef{\subtitle}{
+	\newcommand{\subtitle}{}
+}{ \relax }
+
+\ifundef{\myauthor}{
+	\newcommand{\myauthor}{Undefined author}
+}{ \relax }
+
+\ifundef{\shortauthor}{
+	\newcommand{\shortauthor}{\myauthor}
+}{ \relax }
+
+\ifundef{\mydate}{
+	\newcommand{\mydate}{\today}
+}{ \relax } % else: do nothing
+
+\ifundef{\showtoc}{
+	\newcommand{\showtoc}{no}
+}{ \relax }
+%
+% End: Check if necessary macros have been defined
+%
+
+
+% Enable table of contents if "showtoc" has been set to "yes"
+\expandafter\ifstrequal\expandafter{\showtoc}{yes}{
+	\ShowTOCtrue
+}{
+	\ShowTOCfalse
+}
+
+
+%
+% Begin: Author and Document Information
+%
+\newcommand{\documentTitle}{\mytitle}
+\newcommand{\documentSubtitle}{\subtitle}
+\newcommand{\documentDate}{\mydate}
+
+\newcommand{\documentAuthor}{
+	\myauthor
+}
+
+\newcommand{\documentShortAuthor}{\shortauthor}
+%
+% End: Author and Document Information
+%
+
