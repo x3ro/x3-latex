@@ -1,3 +1,18 @@
+%
+% Begin: Default values for optional meta-data
+%
+\ifundef{\documentShortAuthor}{
+	\newcommand{\documentShortAuthor}{\documentAuthor}
+}{ \relax }
+
+\ifundef{\documentSubtitle}{
+	\newcommand{\documentSubtitle}{}
+}{ \relax }
+%
+% End: Default values for optional meta-data
+%
+
+
 % German for dates, hyphenation and such
 \usepackage[german]{babel}
 
