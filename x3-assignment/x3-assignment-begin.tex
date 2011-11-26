@@ -1,0 +1,72 @@
+% German for dates, hyphenation and such
+\usepackage[german]{babel}
+
+
+% Awesome fonts powered by XeLaTeX
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\setromanfont[Mapping=tex-text]{Garamond}
+\setsansfont[Mapping=tex-text]{Helvetica Neue}
+\setmonofont{Monaco}
+
+% And make Sans-Serif the default font
+\renewcommand{\familydefault}{\sfdefault}
+
+
+%
+% Begin: Fancy Header
+%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\lhead{\documentShortAuthor}
+\rhead{\documentTitle}
+%
+% End: Fancy Header
+%
+
+
+%
+% Begin: Document Title
+%
+%\title{\documentTitle}
+\title{
+	%\vspace{2in}
+	\textmd{
+		\textbf{
+			\documentTitle
+		}
+	}
+	\\
+	\normalsize
+	\vspace{0.1in}
+	\small{ \documentDate }
+	\\
+	\vspace{0.1in}
+	\large{
+		\documentSubtitle
+	}
+	\vfill
+}
+\author{ \documentAuthor }
+\date{}
+
+
+
+
+%
+% End: Document Title
+%
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty} % Don't show page number on title page
+\newpage
+
+\ifShowTOC
+	\tableofcontents
+	\newpage
+\fi
+
