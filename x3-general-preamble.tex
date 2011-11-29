@@ -1,0 +1,29 @@
+%
+% This file contains general settings and packages that are used by in
+% most x3-templates
+%
+
+% We need this to detect whether or not we're running XeTeX
+\usepackage{ifxetex}
+
+% Use UTF-8. XeTeX expects stuff to be in UTF-8, and it
+% doesn't like the package to be included.
+\ifxetex
+	\relax
+\else
+	\usepackage[utf8]{inputenc}
+\fi
+
+% Utility stuff, used, for example, in x3-mmd-compat
+% That is why we need to include it here, and not in -begin
+\usepackage{etoolbox}
+
+% Use Helvetica switch
+\newif\ifUseHelvetica
+
+% XeLaTex Helvetica Neue Switch
+% If you're not using XeTeX, it will just use the regular
+% helvetica package.
+\newif\ifUseHelveticaNeue
+
+

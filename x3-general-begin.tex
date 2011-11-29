@@ -1,0 +1,40 @@
+
+% The Euro-Symbol (€) for TeX
+\usepackage{eurosym}
+
+% German hyphenation and such
+% TODO: Create a switch for everything "german-only"
+\usepackage{ngerman}
+\usepackage[ngerman]{babel}
+
+% Url formatting using \url{}
+\usepackage{url}
+
+% Some generic stuff
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+% If using XeTeX, use more awesome fonts.
+\ifxetex
+	\usepackage{fontspec}
+	\usepackage{xunicode}
+	\usepackage{xltxtra}
+
+	\setromanfont[Mapping=tex-text]{Garamond}
+	\setmonofont[Scale=0.85]{Monaco}
+
+	\ifUseHelveticaNeue
+		\setsansfont[Mapping=tex-text]{Helvetica Neue}
+		\renewcommand{\familydefault}{\sfdefault}
+	\fi
+\else
+	\ifUseHelveticaNeue
+		\UseHelveticatrue
+	\fi
+\fi
+
+
+\ifUseHelvetica
+	\usepackage{helvet}
+	\renewcommand{\familydefault}{\sfdefault}
+\fi
