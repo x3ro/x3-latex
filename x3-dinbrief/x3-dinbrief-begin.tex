@@ -1,0 +1,26 @@
+\input{x3-general-begin}
+
+
+% Assign letter information to correct "slots"
+\date{\letterDate}
+\encl{\letterEnclosures}
+\subject{\letterSubject}
+\address{\letterSender}
+\signature{\letterSenderName}
+\backaddress{\ignorespaces \letterBackaddress}
+
+% Disable address-window border
+\nowindowrules
+
+% Misc stuff
+\setaddressheight{4cm}
+\centeraddress
+% \def\enclname{Anlageasdasdn:}
+
+
+% Letter starts here
+\begin{document}
+\begin{letter}{\ignorespaces \letterRecipientAddress}
+
+\opening{\letterOpening}
+
