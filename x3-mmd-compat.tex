@@ -21,12 +21,25 @@
 	\newcommand{\mydate}{\today}
 }{ \relax } % else: do nothing
 
+\ifundef{\usehelvetica}{
+	\newcommand{\usehelvetica}{no}
+}
+
 \ifundef{\showtoc}{
 	\newcommand{\showtoc}{no}
 }{ \relax }
 %
 % End: Check if necessary macros have been defined
 %
+
+
+% Enable helvetica (neue) if the user so chooses
+\expandafter\ifstrequal\expandafter{\usehelvetica}{yes}{
+	\UseHelveticaNeuetrue
+}{
+	\UseHelveticaNeuefalse
+}
+
 
 
 % Enable table of contents if "showtoc" has been set to "yes"
