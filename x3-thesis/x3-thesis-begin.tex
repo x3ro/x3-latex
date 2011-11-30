@@ -1,0 +1,48 @@
+\input{x3-general-begin}
+\input{x3-general-bibtex}
+
+
+\usepackage[
+%	nonumberlist,	% Don't display page numbers
+	acronym,
+	toc,			% Show glossary in table of contents
+	translate=false	% We translate using glossaries-babel, otherwise some stuff is not translated
+]{glossaries}
+
+\usepackage{glossaries-babel}
+
+\makeglossaries
+
+
+% Some line break adjustments
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
+
+
+% Heading and footer line
+\usepackage[automark]{scrpage2}
+\pagestyle{scrheadings}
+\clearscrheadings
+\clearscrplain
+\clearscrheadfoot
+\ohead{\pagemark}
+\ihead{\headmark}
+
+% Some generic stuff
+\usepackage{ragged2e}
+\usepackage{xspace}
+\usepackage{setspace}
+
+% Absolute positioning of boxes
+\usepackage[absolute]{textpos}
+
+% include pages of external PDF documents
+\usepackage[final]{pdfpages}
+
+% Improved tables
+\usepackage{tabularx}
