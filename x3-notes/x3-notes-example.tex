@@ -1,0 +1,135 @@
+\input{x3-notes-preamble}
+
+% Use Helvetica (Neue)
+\UseHelveticaNeuetrue
+
+% Use multicolumn layout
+\UseColumnstrue
+
+\input{x3-notes-begin}
+
+\section{Allgemeines}
+\subsubsection{Skalarprodukt und Betrag eines Vektors}
+Skalarprodukt:
+\[ \vec x\cdot \vec y = \sum_{i=1}^n x_iy_i = {x_1}{y_1}+\dotsb + {x_n}{y_n} \]
+
+\[ \vec x\cdot \vec x = \sum_{i=1}^n x_i = {x_1}^2 +\dotsb + {x_n}^2 \]
+
+Betrag eines Vektors (Länge):
+\[ |\vec x| = \sqrt{\vec x \cdot \vec x} \]
+
+\section{Gradienten-Kernel}
+
+\[ G_x = \begin{pmatrix}
+-1 & 0 & 1 \\
+-2 & 0 & 2 \\
+-1 & 0 & 3
+\end{pmatrix} \]
+
+\[ G_y = \begin{pmatrix}
+-1 & -2 & -1 \\
+0 & 0 & 0 \\
+1 & 2 & 1
+\end{pmatrix} \]
+
+Wert des Gradienten:
+\[ G = \sqrt{G_x^2 + G_y^2} \]
+
+Richtung des Gradienten:
+\[ \alpha = \arctan\left(\frac{G_y}{G_x}\right) \]
+
+
+\section{Geradengleichungen}
+
+\subsubsection{Lineare Funktion}
+\[ y = mx + b \]
+
+\subsubsection{Hesse'sche Normalform}
+\[ r = x \cdot \cos \Theta + y \cdot \sin \Theta \]
+
+\subsubsection{Achsenabschnittsform}
+\[ \frac{x}{a} + \frac{y}{b} = 1 \] bzw
+\[ Ax + By = 1 = \frac{1}{a}x + \frac{1}{b}y \]
+
+\subsubsection{Lineare Funktion $\rightarrow$ Achsenabschnittsform}
+$b$ übernehmen, für $a$ gilt:
+\[ a = -\frac{b}{m} \]
+
+\subsubsection{Achsenabschnittsform $\rightarrow$ Hesse'sche Normalform}
+Es gilt
+\[ \Theta = \arctan \left ( \frac{a}{b} \right ) \]
+sowie
+\[ r = a \cos \Theta \]
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed
+aliquam dolor eu mi. Quisque porttitor. In at tortor. Vestibulum
+ante ipsum primis in faucibus orci luctus et ultrices posuere
+cubilia Curae; Suspendisse et purus in mauris auctor ullamcorper.
+Nunc sed tellus. Donec fringilla egestas magna. Proin arcu libero,
+auctor vel, sollicitudin eu, tempus in, orci. Sed pharetra eros ut
+nunc. Phasellus congue mauris nec velit. Praesent wisi felis, mollis
+non, vehicula nec, porttitor a, ligula. Maecenas dictum aliquet
+erat. Ut aliquam, lorem quis convallis molestie, dolor nunc ultrices
+arcu, et volutpat dui justo varius ipsum. Vivamus nunc eros,
+eleifend a, tincidunt vitae, tristique eget, ante. Ut enim quam,
+luctus eu, dictum id, pellentesque sit amet, nulla. Nulla at lectus.
+In hac habitasse platea dictumst. Nunc sit amet augue eu leo
+vestibulum viverra. Vestibulum quis dui sed quam porttitor
+convallis. Nulla vitae magna.
+
+\section{Foo}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed
+aliquam dolor eu mi. Quisque porttitor. In at tortor. Vestibulum
+ante ipsum primis in faucibus orci luctus et ultrices posuere
+cubilia Curae; Suspendisse et purus in mauris auctor ullamcorper.
+Nunc sed tellus. Donec fringilla egestas magna. Proin arcu libero,
+auctor vel, sollicitudin eu, tempus in, orci. Sed pharetra eros ut
+nunc. Phasellus congue mauris nec velit. Praesent wisi felis, mollis
+non, vehicula nec, porttitor a, ligula. Maecenas dictum aliquet
+erat. Ut aliquam, lorem quis convallis molestie, dolor nunc ultrices
+arcu, et volutpat dui justo varius ipsum. Vivamus nunc eros,
+eleifend a, tincidunt vitae, tristique eget, ante. Ut enim quam,
+luctus eu, dictum id, pellentesque sit amet, nulla. Nulla at lectus.
+In hac habitasse platea dictumst. Nunc sit amet augue eu leo
+vestibulum viverra. Vestibulum quis dui sed quam porttitor
+convallis. Nulla vitae magna.
+
+\section{Bar}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed
+aliquam dolor eu mi. Quisque porttitor. In at tortor. Vestibulum
+ante ipsum primis in faucibus orci luctus et ultrices posuere
+cubilia Curae; Suspendisse et purus in mauris auctor ullamcorper.
+Nunc sed tellus. Donec fringilla egestas magna. Proin arcu libero,
+auctor vel, sollicitudin eu, tempus in, orci. Sed pharetra eros ut
+nunc. Phasellus congue mauris nec velit. Praesent wisi felis, mollis
+non, vehicula nec, porttitor a, ligula. Maecenas dictum aliquet
+erat. Ut aliquam, lorem quis convallis molestie, dolor nunc ultrices
+arcu, et volutpat dui justo varius ipsum. Vivamus nunc eros,
+eleifend a, tincidunt vitae, tristique eget, ante. Ut enim quam,
+luctus eu, dictum id, pellentesque sit amet, nulla. Nulla at lectus.
+In hac habitasse platea dictumst. Nunc sit amet augue eu leo
+vestibulum viverra. Vestibulum quis dui sed quam porttitor
+convallis. Nulla vitae magna.
+
+
+\section{Baz}
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed
+aliquam dolor eu mi. Quisque porttitor. In at tortor. Vestibulum
+ante ipsum primis in faucibus orci luctus et ultrices posuere
+cubilia Curae; Suspendisse et purus in mauris auctor ullamcorper.
+Nunc sed tellus. Donec fringilla egestas magna. Proin arcu libero,
+auctor vel, sollicitudin eu, tempus in, orci. Sed pharetra eros ut
+nunc. Phasellus congue mauris nec velit. Praesent wisi felis, mollis
+non, vehicula nec, porttitor a, ligula. Maecenas dictum aliquet
+erat. Ut aliquam, lorem quis convallis molestie, dolor nunc ultrices
+arcu, et volutpat dui justo varius ipsum. Vivamus nunc eros,
+eleifend a, tincidunt vitae, tristique eget, ante. Ut enim quam,
+luctus eu, dictum id, pellentesque sit amet, nulla. Nulla at lectus.
+In hac habitasse platea dictumst. Nunc sit amet augue eu leo
+vestibulum viverra. Vestibulum quis dui sed quam porttitor
+convallis.
+
+\input{x3-notes-end}
