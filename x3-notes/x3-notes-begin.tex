@@ -1,0 +1,26 @@
+\input{x3-general-begin}
+
+% Disable section numbering
+\setcounter{secnumdepth}{0}
+
+% Begin: Reduce ALL the spacings
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+\setlength{\parindent}{0pt}
+% End: Reduce ALL the spacings
+
+\begin{document}
+
+\ifUseColumns
+	\begin{multicols}{3}
+\fi
