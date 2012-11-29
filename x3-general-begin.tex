@@ -7,15 +7,23 @@
 
 % German hyphenation and such
 % TODO: Create a switch for everything "german-only"
-\usepackage{ngerman}
+%\usepackage{ngerman}
 \usepackage[ngerman,english]{babel}
 
 % Url formatting using \url{}
-\usepackage{url}
+%\usepackage{url}
+%\usepackage{breakurl}
+
+\setlength{\parindent}{0cm}
 
 % Some generic stuff
 \usepackage{graphicx}
+\usepackage{pdfpages}
 \usepackage[hyperfootnotes=false]{hyperref}
+%\usepackage[hyphenbreaks]{breakurl}
+
+% These are always useful
+\usepackage{todonotes}
 
 % If using XeTeX, use more awesome fonts.
 \ifxetex
@@ -41,3 +49,6 @@
 	\usepackage{helvet}
 	\renewcommand{\familydefault}{\sfdefault}
 \fi
+
+\newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
+\newcommand{\todayInNumbers}{\leadingzero{\day}.\leadingzero{\month}.\the\year}

@@ -6,10 +6,11 @@
 %	nonumberlist,	% Don't display page numbers
 	acronym,
 	toc,			% Show glossary in table of contents
-	translate=false	% We translate using glossaries-babel, otherwise some stuff is not translated
+	translate=false,	% We translate using glossaries-babel, otherwise some stuff is not translated
+    sanitize={description=false}
 ]{glossaries}
 
-\usepackage{glossaries-babel}
+%\usepackage{glossaries-babel}
 
 \makeglossaries
 
@@ -42,7 +43,7 @@
 \usepackage[absolute]{textpos}
 
 % include pages of external PDF documents
-\usepackage[final]{pdfpages}
+% \usepackage[final]{pdfpages}
 
 % Improved tables
 \usepackage{tabularx}
