@@ -1,0 +1,86 @@
+\input{x3-general-begin}
+
+% Package to generate dummy text throughout this template
+\usepackage{lipsum}
+
+\usepackage{multicol}
+\usepackage{kpfonts,baskervald}
+
+%
+% Begin: Default values for optional meta-data
+%
+\ifundef{\documentAuthorEmail}{
+    \newcommand{\documentAuthorEmail}{}
+}{ \relax }
+
+\ifundef{\documentAuthorInstitution}{
+    \newcommand{\documentAuthorInstitution}{}
+}{ \relax }
+%
+% End: Default values for optional meta-data
+%
+
+
+%
+% Begin: Abstract customization
+%
+\usepackage{abstract}
+
+% Set the "Abstract" text to bold
+\renewcommand{\abstractnamefont}{\normalfont\bfseries}
+
+% Set the abstract itself to
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape}
+
+%
+% End: Abstract customization
+%
+
+
+% Begin: Header Customization
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}}
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+
+% End: Header Customization
+
+
+
+%
+% Begin: Document Title
+%
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{\documentTitle}}
+
+\author{
+\large
+\textsc{\documentAuthor}\\[2mm]
+\normalsize \documentAuthorInstitution \\ % Your institution
+\normalsize \documentAuthorEmail
+}
+\date{}
+%
+% End: Document Title
+%
+
+
+
+\begin{document}
+
+% Title
+\maketitle
+%\thispagestyle{fancy}
+
+
+% Abstract
+\begin{abstract}
+\noindent \documentAbstract
+\vspace{5mm}
+\end{abstract}
+
+
+% Two-column layout throughout the main article text
+\begin{multicols}{2}
+
+
+
