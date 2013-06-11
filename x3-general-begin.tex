@@ -1,16 +1,24 @@
 
-% The Euro-Symbol (€) for TeX
-\usepackage{eurosym}
+% ================
+% Generic packages
+% ================
 
-% Some convenience symbols like \degree
-\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage[hyperfootnotes=false]{hyperref}
+
+\usepackage{eurosym}    % The Euro-Symbol (€) for TeX
+\usepackage{gensymb}    % Some convenience symbols like \degree
+\usepackage{todonotes}  % Todo-notes using \todo
+\usepackage{amsmath}    % Additional math symbols
+
 
 % German hyphenation and such
 % TODO: Create a switch for everything "german-only"
 %\usepackage{ngerman}
 %\usepackage[ngerman]{babel}
 
-%\usepackage[english]{babel}
+\usepackage[english]{babel}
 %\usepackage{hyperref}
 
 % Url formatting using \url{}
@@ -24,16 +32,10 @@
 \usepackage{minted}
 
 % Some generic stuff
-\usepackage{graphicx}
-\usepackage{pdfpages}
-\usepackage[hyperfootnotes=false]{hyperref}
+
 %\usepackage[hyphenbreaks]{breakurl}
 
-% These are always useful
-\usepackage{todonotes}
 
-% Math related
-\usepackage{amsmath}
 
 % If using XeTeX, use more awesome fonts.
 \ifxetex
