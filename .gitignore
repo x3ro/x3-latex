@@ -3,6 +3,7 @@
 
 
 # Added by gemignore. Snippet 'LaTeX'
+*.pyg
 *.aux
 *.bbl
 *.blg
