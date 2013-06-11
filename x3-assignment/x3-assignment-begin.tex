@@ -1,8 +1,9 @@
 \input{x3-general-begin}
 
-%
-% Begin: Default values for optional meta-data
-%
+% =====================================
+% Default values for optional meta-data
+% =====================================
+
 \ifundef{\documentShortAuthor}{
 	\newcommand{\documentShortAuthor}{\documentAuthor}
 }{ \relax }
@@ -10,27 +11,25 @@
 \ifundef{\documentSubtitle}{
 	\newcommand{\documentSubtitle}{}
 }{ \relax }
-%
-% End: Default values for optional meta-data
-%
 
 
-%
-% Begin: Fancy Header
-%
+
+% ============
+% Fancy Header
+% ============
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
 \lhead{\documentShortAuthor}
 \rhead{\documentTitle}
-%
-% End: Fancy Header
-%
 
 
-%
-% Begin: Document Title
-%
+
+% ==============
+% Document Title
+% ==============
+
 \title{
 	%\vspace{2in}
 	\textmd{
@@ -51,17 +50,29 @@
 }
 \author{ \documentAuthor }
 \date{}
-%
-% End: Document Title
-%
 
 
-% tikz
+
+% ====
+% Tikz
+% ====
+
 \def\xcolorversion{2.00}
 \def\xkeyvalversion{1.8}
 %\usepackage[version=0.96]{pgf}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows,shapes,backgrounds,calc,patterns}
+
+
+
+% ====================
+% Layout customization
+% ====================
+
+\linespread{1.1}
+
+
+
 
 
 \begin{document}
