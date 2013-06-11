@@ -1,0 +1,14 @@
+% XeTex specific stuff. Only loaded when actually using XeTex,
+% by a mechanism in x3-general-begin.
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\setromanfont[Mapping=tex-text]{Garamond}
+\setmonofont[Scale=0.85]{Monaco}
+
+\ifUseHelveticaNeue
+    \setsansfont[Mapping=tex-text]{Helvetica Neue}
+    \renewcommand{\familydefault}{\sfdefault}
+\fi

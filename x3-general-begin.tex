@@ -7,60 +7,75 @@
 \usepackage{pdfpages}
 \usepackage[hyperfootnotes=false]{hyperref}
 
+\usepackage{float}      % For some reason, figures refuse to show if this package
+                        % isn't included.
+
 \usepackage{eurosym}    % The Euro-Symbol (€) for TeX
 \usepackage{gensymb}    % Some convenience symbols like \degree
 \usepackage{todonotes}  % Todo-notes using \todo
 \usepackage{amsmath}    % Additional math symbols
 
 
-% German hyphenation and such
-% TODO: Create a switch for everything "german-only"
-%\usepackage{ngerman}
-%\usepackage[ngerman]{babel}
 
-\usepackage[english]{babel}
-%\usepackage{hyperref}
+% ================
+% Language related
+% ================
 
-% Url formatting using \url{}
-%\usepackage{url}
-%\usepackage{breakurl}
+\ifLanguageGerman % German hyphenation and such
+    \usepackage{ngerman}
+    \usepackage[ngerman]{babel}
+
+\else % Default is english
+    \usepackage[english]{babel}
+\fi
+
+
+
+% =============
+% Fonts related
+% =============
+
+% If using XeTeX, use more awesome fonts.
+\ifxetex
+    \input{x3-general-xetex}
+\else
+    \ifUseHelveticaNeue
+        \UseHelveticatrue
+    \fi
+\fi
+
+\ifUseHelvetica
+    \usepackage{helvet}
+    \renewcommand{\familydefault}{\sfdefault}
+\fi
 
 \usepackage{parskip}
 \setlength{\parindent}{0cm}
 
+
+
+% =============
+% Code listings
+% =============
+
 \usepackage{listings}
-\usepackage{minted}
-
-% Some generic stuff
-
-%\usepackage[hyphenbreaks]{breakurl}
-
-
-
-% If using XeTeX, use more awesome fonts.
-\ifxetex
-	\usepackage{fontspec}
-	\usepackage{xunicode}
-	\usepackage{xltxtra}
-
-	\setromanfont[Mapping=tex-text]{Garamond}
-	\setmonofont[Scale=0.85]{Monaco}
-
-	\ifUseHelveticaNeue
-		\setsansfont[Mapping=tex-text]{Helvetica Neue}
-		\renewcommand{\familydefault}{\sfdefault}
-	\fi
-\else
-	\ifUseHelveticaNeue
-		\UseHelveticatrue
-	\fi
+\ifUseMinted % Minted uses Pygments for highlighting
+    \usepackage{minted}
 \fi
 
 
-\ifUseHelvetica
-	\usepackage{helvet}
-	\renewcommand{\familydefault}{\sfdefault}
-\fi
+
+% ==============
+% Utility macros
+% ==============
 
 \newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
 \newcommand{\todayInNumbers}{\leadingzero{\day}.\leadingzero{\month}.\the\year}
+
+
+
+% ==========================
+% Load common layout options
+% ==========================
+
+\input{x3-general-layout}
