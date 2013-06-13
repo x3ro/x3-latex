@@ -1,0 +1,93 @@
+#!/usr/bin/env ruby
+#
+# A tool to quickly initialize a Multimarkdown "project" based on an x3-template
+#
+
+require 'fileutils'
+
+def usage
+  """
+  Usage: x3-init <template-name> <init-path>
+    (init-path must exist)
+  """
+end
+
+def error(msg)
+  abort "Error: #{msg}"
+end
+
+def write_file(name, content)
+  error "Refusing to overwrite content in #{name}!" if File.exists? name
+  File.open(name, 'w') {|f| f.write(content) }
+end
+
+
+
+error(usage) if ARGV.length != 2
+error(usage) if !File.directory? ARGV[1]
+
+template = ARGV[0]
+target = ARGV[1]
+
+
+
+puts "Initializing template #{template} in path #{target}"
+FileUtils.chdir(target)
+
+
+
+puts "Initializing git repository"
+error "Target already a git repository" if File.directory? ".git"
+`git init`
+error "Error running 'git init'" if $? != 0
+
+
+
+puts "Creating content.mmd"
+content_mmd = <<-EOF
+Base Header Level:  3
+latex input:        document-info
+latex footer:       #{template}-end
+
+# Hello world
+
+EOF
+
+write_file("content.mmd", content_mmd)
+
+
+
+puts "Creating document-info.tex"
+documentinfo_tex = <<-EOF
+\\input{#{template}-preamble}
+
+%
+% Begin: Author and Document Information
+%
+
+
+%
+% End: Author and Document Information
+%
+
+\\input{#{template}-begin}
+EOF
+
+write_file("document-info.tex", documentinfo_tex)
+
+
+
+puts "Creating build.sh"
+build_sh = <<-EOF
+#!/bin/bash
+
+multimarkdown --to=latex content.mmd > content.tex &&
+    omgtex.rb -o content.tex
+EOF
+
+write_file("build.sh",  build_sh)
+`chmod +x build.sh`
+
+
+
+puts "Done!"
