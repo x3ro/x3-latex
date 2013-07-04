@@ -3,7 +3,6 @@
 
 
 \usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{multicol}
 
 
 
@@ -78,11 +77,15 @@
 
 \begin{document}
 
-\maketitle
 
-\begin{abstract}
-    \documentAbstract
-    \vspace{5mm}
-\end{abstract}
+% We are in the two-column layout, but the abstract should be 1-column
+% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=onecolabs
+\twocolumn[
+    \maketitle
+    \begin{onecolabstract}
+        \vspace{5mm}
+        \documentAbstract
+        \vspace{10mm}
+    \end{onecolabstract}
+]
 
-\begin{multicols}{2} % Two-column layout throughout the main article text
