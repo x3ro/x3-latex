@@ -89,3 +89,27 @@
     \end{onecolabstract}
 ]
 
+% Table of contents. The giant block of latex customization is taken from garoth.com,
+% and adds dots between the TOC entry and the page number.
+\ifShowTOC
+    \makeatletter
+    \renewcommand\l@section[2]{%
+      \ifnum \c@tocdepth >\z@
+        \addpenalty\@secpenalty
+        \addvspace{1.0em \@plus\p@}%
+        \setlength\@tempdima{1.5em}%
+        \begingroup
+          \parindent \z@ \rightskip \@pnumwidth
+          \parfillskip -\@pnumwidth
+          \leavevmode \bfseries
+          \advance\leftskip\@tempdima
+          \hskip -\leftskip
+          #1\nobreak\
+          \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
+         \hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+        \endgroup
+      \fi}
+    \makeatother
+    \tableofcontents
+\fi
+
