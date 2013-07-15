@@ -82,11 +82,14 @@
 % http://www.tex.ac.uk/cgi-bin/texfaq2html?label=onecolabs
 \twocolumn[
     \maketitle
-    \begin{onecolabstract}
-        \vspace{5mm}
-        \documentAbstract
-        \vspace{10mm}
-    \end{onecolabstract}
+    \ifDisableAbstract
+    \else
+        \begin{onecolabstract}
+            \vspace{5mm}
+            \documentAbstract
+            \vspace{10mm}
+        \end{onecolabstract}
+    \fi
 ]
 
 % Table of contents. The giant block of latex customization is taken from garoth.com,
