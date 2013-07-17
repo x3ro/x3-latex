@@ -46,8 +46,11 @@
   \renewcommand\thesection{\Roman{section}}
 \fi
 
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{}
-\titleformat{\subsection}[block]{\large\scshape\centering}{\thesubsection.}{1em}{}
+\ifSingleColumn
+\else
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{}
+  \titleformat{\subsection}[block]{\large\scshape\centering}{\thesubsection.}{1em}{}
+\fi
 
 
 
@@ -85,17 +88,25 @@
 
 % We are in the two-column layout, but the abstract should be 1-column
 % http://www.tex.ac.uk/cgi-bin/texfaq2html?label=onecolabs
-\twocolumn[
-    \maketitle
-    \ifDisableAbstract
-    \else
-        \begin{onecolabstract}
-            \vspace{5mm}
-            \documentAbstract
-            \vspace{10mm}
-        \end{onecolabstract}
-    \fi
-]
+\newcommand{\generateTitle}{
+  \maketitle
+  \ifDisableAbstract
+  \else
+      \begin{onecolabstract}
+          \vspace{5mm}
+          \documentAbstract
+          \vspace{10mm}
+      \end{onecolabstract}
+  \fi
+}
+
+\ifSingleColumn
+  \generateTitle
+\else
+  \twocolumn[
+    \generateTitle
+  ]
+\fi
 
 % Table of contents. The giant block of latex customization is taken from garoth.com,
 % and adds dots between the TOC entry and the page number.
