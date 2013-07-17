@@ -41,8 +41,13 @@
 \usepackage{titlesec} % Allows customization of titles
 
 % Change the look of the section titles
-\renewcommand\thesection{\Roman{section}}
+\ifDisableRomanSections
+\else
+  \renewcommand\thesection{\Roman{section}}
+\fi
+
 \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{}
+\titleformat{\subsection}[block]{\large\scshape\centering}{\thesubsection.}{1em}{}
 
 
 
