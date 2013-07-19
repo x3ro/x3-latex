@@ -1,0 +1,32 @@
+%
+% These are utility commands I often use in my documents.
+% They're not loaded automatically by any of the templates, so you'll have to do that
+% manually if you'd like to use them :)
+%
+
+\newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
+\newcommand{\todayInNumbers}{\leadingzero{\day}.\leadingzero{\month}.\the\year}
+
+\newcommand{\mcal}[1]{\mathcal{#1}}
+
+\newcommand{\op}[1]{\operatorname{#1}}
+
+\newcommand{\todoin}[1]{\todo[inline]{#1}}
+
+\newcommand{\fig}[2]{
+    \begin{figure}[h]
+        \centering\footnotesize
+        \includegraphics[width=\columnwidth]{figures/#1}
+        \caption{#2}
+        \label{fig:#1}
+    \end{figure}
+}
+
+\newcommand{\figw}[2]{
+    \begin{figure*}[htbp]
+        \centering\footnotesize
+        \includegraphics[width=\textwidth]{figures/#1}
+        \caption{#2}
+        \label{fig:#1}
+    \end{figure*}
+}
