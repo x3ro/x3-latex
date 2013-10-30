@@ -4,6 +4,9 @@
 % manually if you'd like to use them :)
 %
 
+% Needed for landscape figures
+\usepackage{pdflscape}
+
 \newcommand{\leadingzero}[1]{\ifnum #1<10 0\the#1\else\the#1\fi}
 \newcommand{\todayInNumbers}{\leadingzero{\day}.\leadingzero{\month}.\the\year}
 
@@ -13,6 +16,7 @@
 
 \newcommand{\todoin}[1]{\todo[inline]{#1}}
 
+% Normal figure
 \newcommand{\fig}[2]{
     \begin{figure}[h]
         \centering\footnotesize
@@ -22,6 +26,7 @@
     \end{figure}
 }
 
+% Wide figure (for two-column mode)
 \newcommand{\figw}[2]{
     \begin{figure*}[htbp]
         \centering\footnotesize
@@ -29,4 +34,16 @@
         \caption{#2}
         \label{fig:#1}
     \end{figure*}
+}
+
+% Landscape figure
+\newcommand{\figl}[2]{
+    \begin{landscape}
+         \begin{figure}
+             \centering\footnotesize
+             \includegraphics[width=\linewidth]{figures/#1}
+             \caption{#2}
+             \label{fig:#1}
+         \end{figure}
+    \end{landscape}
 }
