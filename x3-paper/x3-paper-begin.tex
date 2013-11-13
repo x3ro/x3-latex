@@ -10,10 +10,6 @@
 % Default values for optional meta-data
 % =====================================
 
-\ifundef{\documentAuthorEmail}{
-    \newcommand{\documentAuthorEmail}{}
-}{ \relax }
-
 \ifundef{\documentAuthorInstitution}{
     \newcommand{\documentAuthorInstitution}{}
 }{ \relax }
@@ -60,13 +56,9 @@
 
 \title{\vspace{-15mm}\fontsize{24pt}{23pt}\selectfont\textsf{\textbf{\documentTitle}}}
 
-\author{
-\large
-\documentAuthor\\[2mm]
-\normalsize \documentAuthorInstitution \\ % Your institution
-\normalsize \documentAuthorEmail
-}
-\date{}
+\author{\documentAuthor}
+
+\date{\small \documentAuthorInstitution \vspace{5mm}}
 
 
 
@@ -115,6 +107,9 @@
   \maketitle
   \ifDisableAbstract
   \else
+      % This is the space after the date (which we filled with the institution).
+      % Since the abstract has its own spacing, we have to remove this here.
+      \vspace{-5mm}
       \begin{onecolabstract}
           \vspace{5mm}
           \documentAbstract
