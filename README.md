@@ -15,6 +15,11 @@ but you'll also need to get [`omgtex.rb`](https://github.com/x3ro/dotfiles/blob/
 which is a script I use for "building" TeX files.
 
 
+## Using BibTex
+
+The `omgtex.rb` command has support for bibtex (-b option), and so do the templates. The BibTeX configuration is done in `x3-general-bibtex`. Currently, the ["x3-dcu"](https://github.com/x3ro/custom-dcu.bst) bibliography style (which I had to adapt from dcu.bst) is hard-coded there. If this is bothering you, please create an issue and I'll fix it. Since I'm currently assuming to be the only person using these templates, it is not a priority until then :)
+
+
 # FAQ
 
 Nobody has asked me any questions about my templates so far ;) If you want to use them, and can't get
