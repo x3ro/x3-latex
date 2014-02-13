@@ -25,8 +25,10 @@
     \usepackage[english,ngerman]{babel}
     \addto\extrasngerman{\def\figureautorefname{Abbildung}}
     \addto\extrasngerman{\def\sectionautorefname{Abschnitt}}
+    \addto\extrasngerman{\def\tableautorefname{Tabelle}}
 \else % Default is english
     \usepackage[english]{babel}
+    \providecommand*{\listingautorefname}{Listing}
 \fi
 
 
