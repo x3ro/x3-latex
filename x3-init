@@ -36,13 +36,6 @@ FileUtils.chdir(target)
 
 
 
-puts "Initializing git repository"
-error "Target already a git repository" if File.directory? ".git"
-`git init`
-error "Error running 'git init'" if $? != 0
-
-
-
 puts "Creating content.mmd"
 content_mmd = <<-EOF
 Base Header Level:  3
