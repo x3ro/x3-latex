@@ -36,8 +36,8 @@ FileUtils.chdir(target)
 
 
 
-puts "Creating content.mmd"
-content_mmd = <<-EOF
+puts "Creating content.md"
+content_md = <<-EOF
 Base Header Level:  3
 latex input:        document-info
 latex footer:       #{template}-end
@@ -46,7 +46,7 @@ latex footer:       #{template}-end
 
 EOF
 
-write_file("content.mmd", content_mmd)
+write_file("content.md", content_md)
 
 
 
@@ -74,7 +74,7 @@ puts "Creating build.sh"
 build_sh = <<-EOF
 #!/bin/bash
 
-multimarkdown --to=latex content.mmd > content.tex &&
+multimarkdown --to=latex content.md > content.tex &&
     omgtex.rb -o content.tex
 EOF
 
