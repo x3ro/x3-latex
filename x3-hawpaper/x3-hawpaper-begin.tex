@@ -1,7 +1,7 @@
 \input{x3-general-begin}
 
 \usepackage[square,sort,comma,numbers]{natbib}
-\bibliographystyle{IEEEbib}
+\bibliographystyle{IEEEtran}
 \urlstyle{same}
 \renewcommand{\harvardurl}[1]{\textbf{URL:} \textit{\url{#1}}}
 
@@ -37,6 +37,9 @@
 
 \maketitle
 
-\begin{abstract}
-    \documentAbstract
-\end{abstract}
+\ifDisableAbstract
+\else
+  \begin{abstract}
+      \documentAbstract
+  \end{abstract}
+\fi
