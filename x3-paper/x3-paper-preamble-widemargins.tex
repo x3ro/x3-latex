@@ -4,21 +4,25 @@
     11pt
 ]{article}
 
+%regular letter size is 210 wide by 297 long
 \usepackage[
+    paperwidth=270mm,
+    paperheight=297mm,
     hmarginratio=1:1,
     top=25mm,
     bottom=25mm,
     columnsep=20pt,
     footnotesep=1cm,
-    left=25mm
+    left=55mm
 ]{geometry}
 
 \input{x3-general-preamble}
 
 % Todo-notes using \todo
 % Needs to be included here because textwidth is different for the
-% widemargins preamble version
-\usepackage[textwidth=20mm]{todonotes}
+% normal preamble version
+\usepackage[textwidth=50mm]{todonotes}
+\setlength{\marginparwidth}{50mm} % Fixes left column todos overlapping the column.
 
 % Add switch to disable the Abstract
 \newif\ifDisableAbstract
@@ -31,3 +35,4 @@
 
 % Single column switch
 \newif\ifSingleColumnTOC
+
