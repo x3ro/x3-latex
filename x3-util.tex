@@ -14,7 +14,12 @@
 
 \newcommand{\op}[1]{\operatorname{#1}}
 
-\newcommand{\todoin}[1]{\todo[inline]{#1}}
+\ifDisableTodos
+    \renewcommand{\todo}[1]{}
+    \newcommand{\todoin}[1]{}
+\else
+    \newcommand{\todoin}[1]{\todo[inline]{#1}}
+\fi
 
 % Normal figure
 \newcommand{\fig}[2]{
