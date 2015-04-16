@@ -3832,6 +3832,7 @@ between column types.}%
 % compsoc journals need extra spacing
 \ifCLASSOPTIONconference\else
 \def\@seccntformat#1{\csname the#1dis\endcsname\hskip 1em\relax}
+\def\@seccntformatinl#1{\csname the#1dis\endcsname\hskip 1em\relax}
 \fi\fi
 
 %v1.7 put {} after #6 to allow for some types of user font control
