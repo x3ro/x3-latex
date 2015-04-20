@@ -1270,8 +1270,9 @@
 \let\LaTeXenumerate\enumerate
 \let\endLaTeXenumerate\endenumerate
 
+ \setlength{\itemsep}{5mm}
 % provide original LaTeX description environment from article.cls
-\newenvironment{LaTeXdescription}
+\newenvironment{description}
                {\list{}{\labelwidth\z@ \itemindent-\leftmargin
                         \let\makelabel\descriptionlabel}}
                {\endlist}
@@ -1284,8 +1285,8 @@
 \def\enditemize{\@endIEEEitemize}
 \def\enumerate{\@IEEEenumerate}
 \def\endenumerate{\@endIEEEenumerate}
-\def\description{\@IEEEdescription}
-\def\enddescription{\@endIEEEdescription}
+%\def\description{\@IEEEdescription}
+%\def\enddescription{\@endIEEEdescription}
 
 % provide the user with aliases - may help those using packages that
 % override itemize, enumerate, or description
