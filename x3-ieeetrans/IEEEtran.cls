@@ -774,12 +774,12 @@
 
 % normally zero, should be relative to font height.
 % put in a little rubber to help stop some bad breaks (underfull vboxes)
-\parskip 0ex plus 0.2ex minus 0.1ex
-\ifCLASSOPTIONconference
-\parskip 6pt plus 2pt minus 1pt
-\fi
+\parskip 1ex plus 0.2ex minus 0.1ex
+%\ifCLASSOPTIONconference
+%\parskip 6pt plus 2pt minus 1pt
+%\fi
 
-\parindent    1.0em
+\parindent    0em
 \ifCLASSOPTIONconference
 \parindent 14.45pt
 \fi
@@ -1281,10 +1281,10 @@
 
 
 % override LaTeX's default IED lists
-\def\itemize{\@IEEEitemize}
-\def\enditemize{\@endIEEEitemize}
-\def\enumerate{\@IEEEenumerate}
-\def\endenumerate{\@endIEEEenumerate}
+%\def\itemize{\@IEEEitemize}
+%\def\enditemize{\@endIEEEitemize}
+%\def\enumerate{\@IEEEenumerate}
+%\def\endenumerate{\@endIEEEenumerate}
 %\def\description{\@IEEEdescription}
 %\def\enddescription{\@endIEEEdescription}
 
