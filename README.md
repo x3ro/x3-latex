@@ -11,7 +11,7 @@ Clone this repo into a directory where LaTeX will find it. For me, on Mac OS X u
 that is `~/Library/texmf/tex/latex/`, but that might differ for you.
 
 Thats it. You can use the `x3-init` script to automatically setup "project" structure for you,
-but you'll also need to get [`omgtex.rb`](https://github.com/x3ro/dotfiles/blob/master/.bin/omgtex.rb),
+but you'll also need to get [`omgtex.rb`](https://github.com/x3ro/omgtex),
 which is a script I use for "building" TeX files.
 
 
