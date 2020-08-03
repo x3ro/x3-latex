@@ -16,6 +16,20 @@
 \centeraddress
 \def\enclname{Anlagen:}
 
+% Begin: Nur die obere Faltmarkierung anzeigen
+\makeatletter
+\def\ka@db@tswindowtics{%
+    \ka@db@tmpdimb=\ufldmarkvpos
+    \advance\ka@db@tmpdimb by -\ka@db@vfuzz
+    \vbox to 0pt{%
+      \rule{0pt}{\ka@db@tmpdimb}%
+      \hbox to 0pt{\hspace*{\ka@db@foldmarkhoffs}%
+      \vbox{\hrule width \ka@db@foldmarklen}\hss}%
+      \vss}\nointerlineskip
+    \ka@db@tmpdimb=\perfmarkvpos
+}
+\makeatother
+% End: Nur die obere Faltmarkierung anzeigen
 
 % Letter starts here
 \begin{document}
