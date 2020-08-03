@@ -1,0 +1,13 @@
+#!/bin/bash
+set -ex
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages
+    mkdir -p "${HOME}/Library/texmf/tex/latex/x3-latex"
+    cp -R ${DIR}/* "${HOME}/Library/texmf/tex/latex/x3-latex/"
+else
+    echo "Only macOS supported at the moment, sorry"
+    exit 1
+fi
