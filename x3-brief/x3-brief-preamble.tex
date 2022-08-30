@@ -1,0 +1,93 @@
+\documentclass[
+    11pt,
+    a4paper,
+    ../letter,
+    parskip=yes,
+    ]{scrlttr2}
+\usepackage{lipsum} % Remove if you don't need sample text
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{tabularx}
+\usepackage[absolute]{textpos}
+
+\ProvidesFile{letter.lco}[2019-07-08]
+\LoadLetterOption{DIN5008B}
+% \LoadLetterOption{visualize}
+% \showfields{address,location}
+
+\RequirePackage[ngerman]{babel}
+\RequirePackage{fix-cm}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{graphicx}
+\RequirePackage{csquotes}
+\RequirePackage{hyperref}
+\RequirePackage{tabularx}
+\RequirePackage{xcolor}
+%\hypersetup{pdfpagemode=None}
+\KOMAoptions{
+        paper=a4,
+        pagenumber=botright,
+        fromalign=right,
+        fromrule=afteraddress,
+        fromphone,
+%        fromfax,
+%        fromlogo,
+%        fromurl,
+        fromemail,
+        backaddress,
+        foldmarks,
+%        headsepline,
+%        footsepline,
+        firsthead=no,
+        enlargefirstpage
+}
+% \setkomavar{fromname}{}
+% \setkomavar{fromaddress}{}
+\setkomavar{backaddress}{\letterBackaddress}
+\setkomavar{specialmail}{~}
+%\setkomavar{fromphone}{+49\,(0)\,111\,0000000}
+%\setkomavar{fromfax}{+49\,(0)\,555\,12345}
+%\setkomavar{fromemail}{mail@example.com}
+%\setkomavar{emailseparator}[E-Mail]{: }
+%\setkomavar{fromurl}{\url{//www.example.com}}
+%\setkomavar{urlseparator}[]{}
+
+\definecolor{mygray}{gray}{0.5}
+
+\setkomavar{backaddressseparator}{~{$\vcenter{\hbox{\scalebox{0.5}{$\bullet$}}}$} }
+\setkomavar{frombank}{\letterSenderBankDetails}
+%\setkomavar{place}{Musterstadt}
+\renewcommand*{\raggedsignature}{\raggedright}
+% \setkomavar{fromlogo}{\parbox[b]{8cm}{\usekomafont{fromaddress}
+%     {\mbox{\LARGE \bfseries Max Mustermann}}
+%     \smallskip}
+% }
+%\setkomafont{backaddress}{\sffamily}
+\setkomafont{toname}{\sffamily}
+\setkomafont{toaddress}{\sffamily}
+% \setkomafont{toname}{\sffamily}
+\addtokomafont{toname}{\large}
+\addtokomafont{toaddress}{\large}
+%\pagestyle{headings}
+
+% Comment out the following block to hide the bank details
+\setkomavar{firstfoot}{
+    \begin{center}
+        \scriptsize{\textsf{\color{mygray}\def\\{\usekomavar{backaddressseparator}}
+        \usekomavar{frombank}}}
+    \end{center}
+}
+
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+
+\date{\letterDate}
+
+\usepackage{enumitem}
+\setlist{nosep}
+
+
+% General includes used by all x3-templates
+\input{x3-general-preamble}

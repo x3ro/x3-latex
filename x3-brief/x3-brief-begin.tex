@@ -1,0 +1,23 @@
+\begin{document}
+
+\newfontfamily\fa{Helvetica Neue Medium}
+\newfontfamily\fc{Helvetica Neue}
+
+%\TPoptions{absolute=true, showboxes=false}
+\begin{textblock*}{\textwidth}(25mm,12mm)
+  \raggedleft
+  \fontsize{16}{19}
+  \fa \letterSenderHeader
+\end{textblock*}
+
+\begin{textblock*}{\textwidth}(25mm,29mm)
+  \raggedleft %
+  \letterSender
+\end{textblock*}
+
+
+\setkomavar{subject}{\letterSubject}
+
+\begin{letter}{\letterRecipientAddress}
+
+\opening{\letterOpening}
